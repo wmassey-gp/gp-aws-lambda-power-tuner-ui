@@ -45,15 +45,9 @@ describe('AppComponent', () => {
   });
 
   it('should create the power value range', () => {
-    const expected = [
-      128, 192, 256, 320, 384, 448, 512, 576, 640, 704, 768,
-      832, 896, 960, 1024, 1088, 1152, 1216, 1280, 1344, 1408,
-      1472, 1536, 1600, 1664, 1728, 1792, 1856, 1920, 1984, 2048,
-      2112, 2176, 2240, 2304, 2368, 2432, 2496, 2560, 2624, 2688,
-      2752, 2816, 2880, 2944, 3008
-    ];
-    expect(app.getPowerValues()).toEqual(expected);
-    expect(app.powerValues).toEqual(expected);
+    const expected = 159;
+    expect(app.getPowerValues().length).toEqual(expected);
+    expect(app.getPowerValues()).toContain(3008);
   });
 
   it('should return the New Tuner operation type on init', () => {
@@ -156,12 +150,12 @@ describe('AppComponent', () => {
       operationType: 'New Tuner',
       lambdaARN: 'arn:aws:lambda:us-east-1:000000000000:function:TestLambda',
       strategy: 'balanced',
-      powerValues: 'ALL',
+      powerValues: [ '128', '256', '512', '1024', '1536', '3008' ],
       balancedWeight: 0.5,
       num: 10,
       payload: Object({}),
       includePayload: false,
-      useCustom: false,
+      useCustom: 'default',
       executionId: '',
       parallelInvocation: true
     });

@@ -125,5 +125,8 @@
         }
       }
     }},
-  "defaultProject": "power-tuner-ui"
+  "defaultProject": "power-tuner-ui",
+  "cli": {
+    "analytics": false
+  }
 }
