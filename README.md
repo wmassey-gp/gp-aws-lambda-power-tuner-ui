@@ -27,7 +27,7 @@ You can deploy the solution to your AWS account using the following easy steps:
 
 Clone down the repo and install the modules in both folders
 ```bash
-git clone https://github.com/mattymoomoo/aws-power-tuner-ui.git
+git clone https://github.com/wmassey-gp/gp-aws-lambda-power-tuner-ui.git
 
 cd aws-power-tuner-ui/website
 npm install
